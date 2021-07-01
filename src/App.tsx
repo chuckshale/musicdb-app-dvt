@@ -5,27 +5,25 @@ import NavBar from "./components/Navbar"
 
 function App() {
 
-  const initialState = {
-    tracks : []
-  }
-
-  const [state, setstate] = useState(initialState)
+  const [searchText, setSearchText] = useState("")
   const [trackList, setTrackList] = useState([]);
 
 
-  const getArtistList  = (tracks:any) => {
+  const getArtistList  = (tracks:any,searchText:any) => {
     setTrackList(tracks)
+    setSearchText(searchText);
 
   }
 
   return (
     <div className="App">
       <header className="App-header">
-        <NavBar getTrackList={(tracks:any) => getArtistList(tracks.tracks)}/>
-        <AlbumList trackList={trackList}/>
+        <NavBar getTrackList={(tracks:any) => getArtistList(tracks.tracks,tracks.searchText)}/>
+        <AlbumList trackList={trackList} searchText={searchText}/>
       </header>
     </div>
   );
 }
+
 
 export default App;

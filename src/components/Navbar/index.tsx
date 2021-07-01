@@ -49,7 +49,7 @@ const Navbar = (props: NavbarProps) => {
     <>
       <nav className="navbar">
         <SearchBtn getTrackNames={() => getTrackist(state.searchText)} />
-        <input type="text" onChange={(e) => {
+        <input className="navbar-search" type="text" onChange={(e) => {
           setstate((prevState) => ({
             ...prevState,
             searchText: e.target.value

@@ -5,6 +5,7 @@ interface ArtistViewProps {
   artistViewResponse: any;
   cover: string;
   artist: string;
+  closeArtistView :any
 }
 
 
@@ -30,7 +31,7 @@ const ArtistView = (props: ArtistViewProps) => {
   return (
     <>
       <div className="artist-view__container">
-
+        <div className="artist-view__close" onClick={() => props.closeArtistView()}>X</div>
         <div className="artist-view__description" style={{ backgroundImage: `url(${props.cover})` }}>
           <h1>{props.artist}</h1>
         </div>

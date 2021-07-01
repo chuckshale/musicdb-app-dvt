@@ -1,5 +1,27 @@
+.navbar {
+    height: 60px;
+    background: rgb(52,57,81);
+    padding: 10px 20px 0px 20px;
+}
+
+.primary-btn {
+    border: none;
+    background-color: #0d6efd;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+}   
+
+.navbar-search {
+    padding: 8px;
+    margin-left: 5px;
+}
+
 .inner-container {
     width: 100%;
+}
+.inner-container > h1 {
+    text-align: center;
 }
 .artist__list {
     display: flex;
@@ -17,15 +39,26 @@
     margin: 0 10px;
     max-width: 250px;
 }
-
-
 .artist-view__container {
     max-width: 1024px;
     box-shadow: #ccc 1px 2px 2px 1px;
     display:inline-block;
     width: 100%;
+    position: relative;
 }
 
+.artist-view__close {
+    position: absolute;
+    right: 0;
+    color: #fff;
+    background-color: #000;
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 15px;
+}
 .artist-view__description {
     padding:150px;
     background-repeat: no-repeat;
