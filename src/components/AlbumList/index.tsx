@@ -65,6 +65,7 @@ const AlbumList = (props: AlbumListProps) => {
                             return (
                                 <button key={index} onClick={() => getArtistView(artist.artist.id, artist.artist.picture_xl, artist.artist.name)} className="artist-cover__main">
                                     <ArtistCover
+                                    duration={artist.duration}
                                         album={artist.album.title}
                                         artist={artist.artist.name}
                                         imgUrl={artist.artist.picture_medium}

@@ -1,4 +1,4 @@
-const endpoint = "https://api.deezer.com/"
+const endpoint = "https://api.deezer.com/" // in an actual project pull from .env
 
 export const trackSearch = (track: string) => {
     return fetch(`${endpoint}/search?q=${track}`).then(res =>  res.json())

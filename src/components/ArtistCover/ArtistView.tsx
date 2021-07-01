@@ -33,7 +33,7 @@ const ArtistView = (props: ArtistViewProps) => {
       <div className="artist-view__container">
         <div className="artist-view__close" onClick={() => props.closeArtistView()}>X</div>
         <div className="artist-view__description" style={{ backgroundImage: `url(${props.cover})` }}>
-          <h1>{props.artist}</h1>
+          <h1>{props.artist} {state.fanList.length !== 0 ? ` / Fans (${state.fanList.length}) ` : ""} </h1>
         </div>
         <div className="artist-view__top-tracks__container">
 
@@ -52,7 +52,7 @@ const ArtistView = (props: ArtistViewProps) => {
           </div>
         </div>
         <div className="artist-albums">
-          <h4>Albums</h4>
+          <h4>Albums ({state.albums.length})</h4>
           <div className="artist__list">
             {state.albums && state.albums.map((album: any, index) => {
               return (
