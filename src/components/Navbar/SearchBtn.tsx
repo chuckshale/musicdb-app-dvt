@@ -1,21 +1,17 @@
 import { useEffect } from "react"
 import {trackSearch} from "../../utils/API";
 
-const SearchBtn = () => {
+interface SearchBtnProps {
+    trackName?: string;
+    getTrackNames : any;
+}
 
-  useEffect(() => {
-    getArtistList()
-  },[])
-
-  const getArtistList = () => {
-        trackSearch("I need a dollar").then(res => {
-            console.log(res)
-        })
-  }
+const SearchBtn = (props:SearchBtnProps) => {
+    
 
   return (
     <>
-      Search 
+      <button onClick={() => props.getTrackNames()}> Search</button>
     </>
   )
 }
